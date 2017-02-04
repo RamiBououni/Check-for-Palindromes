@@ -1,0 +1,29 @@
+function palindrome(str) {
+  //remove special characteres from string \W: word character a-z, A-Z, 0-9, |_ underscore
+  var symbols = /\W|_/g;
+  str = str.replace(symbols, "");
+  //apply lower case to all the string
+  str = str.toLowerCase();
+  
+  var isPalindrome = str;
+  
+  //turn the string into an array
+  isPalindrome = isPalindrome.split("");
+  
+  //reverse the array
+  isPalindrome = isPalindrome.reverse("");
+  
+  //turn the array back into a string
+  
+  isPalindrome = isPalindrome.join("");
+  
+  if(isPalindrome == str){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+
+//test
+palindrome("HELLO@^%$^%$@!");
